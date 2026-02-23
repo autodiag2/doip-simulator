@@ -352,8 +352,7 @@ def receive_doip(s, identifier, parser):
 
 while True:
     try:
-        gateway_addr = discover_doip()
-        setup_doip(gateway_addr)
+        setup_doip("127.0.0.1")
     except OSError as err:
         logging.error("Error: %s", str(err))
         time.sleep(5)
